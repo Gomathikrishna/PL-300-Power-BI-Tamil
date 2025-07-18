@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Power BI Learning Course</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Comprehensive Power BI Learning Course - From Beginner to Advanced">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="icon" href="assets/images/favicon.ico">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourusername.github.io/power-bi-learning-course/">
+  <meta property="og:title" content="Power BI Learning Course">
+  <meta property="og:description" content="Master Power BI with our comprehensive course covering data analysis, modeling, and visualization">
+  <meta property="og:image" content="assets/images/course-banner.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yourusername.github.io/power-bi-learning-course/">
+  <meta property="twitter:title" content="Power BI Learning Course">
+  <meta property="twitter:description" content="Master Power BI with our comprehensive course covering data analysis, modeling, and visualization">
+  <meta property="twitter:image" content="assets/images/course-banner.png">
+</head>
+
+<body>
+  <div id="app">Loading...</div>
+  <script>
+    window.$docsify = {
+      name: 'Power BI Learning Course',
+      repo: 'https://github.com/yourusername/power-bi-learning-course',
+      loadSidebar: true,
+      loadNavbar: true,
+      coverpage: true,
+      onlyCover: false,
+      maxLevel: 4,
+      subMaxLevel: 2,
+      auto2top: true,
+      homepage: 'README.md',
+      
+      // Search configuration
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Search the course...',
+        noData: 'No results found',
+        depth: 4,
+        hideOtherSidebarContent: false,
+      },
+
+      // Copy code configuration
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'Copied'
+      },
+
+      // Pagination
+      pagination: {
+        previousText: 'Previous',
+        nextText: 'Next',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+
+      // Progress indicator
+      progress: {
+        position: "top",
+        color: "var(--theme-color,#0078d4)",
+        height: "3px",
+      },
+
+      // Tab configuration
+      tabs: {
+        persist: true,
+        sync: true,
+        theme: 'classic',
+        tabComments: true,
+        tabHeadings: true
+      },
+
+      // Flexible alerts
+      'flexible-alerts': {
+        style: 'flat',
+        note: {
+          label: "Note"
+        },
+        tip: {
+          label: "Tip"
+        },
+        warning: {
+          label: "Warning"
+        },
+        danger: {
+          label: "Important"
+        }
+      },
+
+      // Count configuration
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'english'
+      }
+    }
+  </script>
+  
+  <!-- Docsify core -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+  
+  <!-- Language highlighting -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-dax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>
+
+  <!-- Custom scripts -->
+  <script src="assets/js/custom.js"></script>
+  
+  <!-- Google Analytics (replace with your tracking ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_TRACKING_ID');
+  </script>
+</body>
+</html>
