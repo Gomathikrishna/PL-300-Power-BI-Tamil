@@ -2,38 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Power BI Learning Course</title>
+  <title>PL-300 Power BI Tamil Course</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Comprehensive Power BI Learning Course - From Beginner to Advanced">
+  <meta name="description" content="Complete PL-300 Power BI Course in Tamil - From Beginner to Advanced">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css">
-  <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel="icon" href="assets/images/favicon.ico">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://Gomathikrishna/PL-300-Power-BI-Tamil/">
-  <meta property="og:title" content="Power BI Learning Course">
-  <meta property="og:description" content="Master Power BI with our comprehensive course covering data analysis, modeling, and visualization">
-  <meta property="og:image" content="assets/images/course-banner.png">
+  <meta property="og:url" content="https://gomathikrishna.github.io/PL-300-Power-BI-Tamil/">
+  <meta property="og:title" content="PL-300 Power BI Tamil Course">
+  <meta property="og:description" content="Complete Power BI course in Tamil covering data analysis, modeling, and visualization">
+  <meta property="og:image" content="https://img.icons8.com/color/96/000000/power-bi.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://Gomathikrishna/PL-300-Power-BI-Tamil/">
-  <meta property="twitter:title" content="Power BI Learning Course">
-  <meta property="twitter:description" content="Master Power BI with our comprehensive course covering data analysis, modeling, and visualization">
-  <meta property="twitter:image" content="assets/images/course-banner.png">
+  <meta property="twitter:url" content="https://gomathikrishna.github.io/PL-300-Power-BI-Tamil/">
+  <meta property="twitter:title" content="PL-300 Power BI Tamil Course">
+  <meta property="twitter:description" content="Complete Power BI course in Tamil covering data analysis, modeling, and visualization">
+  <meta property="twitter:image" content="https://img.icons8.com/color/96/000000/power-bi.png">
+  
+  <!-- Custom Styles -->
+  <style>
+    :root {
+      --theme-color: #0078d4;
+      --theme-color-secondary: #106ebe;
+      --theme-color-light: #deecf9;
+      --accent-color: #ff6900;
+      --success-color: #107c10;
+      --tamil-font: 'Noto Sans Tamil', 'Latha', 'Vijaya', sans-serif;
+    }
+
+    /* Tamil font support */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap');
+    
+    body {
+      font-family: var(--tamil-font);
+      line-height: 1.6;
+    }
+    
+    .tamil {
+      font-family: var(--tamil-font);
+      font-weight: 500;
+    }
+    
+    /* Cover page styling */
+    .cover-main {
+      background: linear-gradient(135deg, var(--theme-color) 0%, var(--theme-color-secondary) 100%);
+      color: white;
+    }
+
+    .cover-main > p:last-child a {
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 24px;
+      margin: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cover-main > p:last-child a:hover {
+      background: #e55a00;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Sidebar styling */
+    .sidebar ul li a {
+      font-family: var(--tamil-font);
+      font-weight: 500;
+    }
+
+    /* Video embed styling */
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Progress indicator */
+    .progress-indicator {
+      background: var(--theme-color-light);
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin: 15px 0;
+      border-left: 4px solid var(--theme-color);
+    }
+
+    /* Module cards */
+    .module-card {
+      background: white;
+      border: 1px solid #e1e5e9;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .module-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Table styling */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.5rem 0;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    table th {
+      background: var(--theme-color);
+      color: white;
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    table tr:hover {
+      background: #f8f9fa;
+    }
+
+    /* Alert boxes */
+    .alert {
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+      border-left: 4px solid;
+    }
+
+    .alert-info {
+      background: var(--theme-color-light);
+      border-left-color: var(--theme-color);
+      color: var(--theme-color-secondary);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .content {
+        padding: 1rem;
+      }
+      
+      table {
+        font-size: 0.9rem;
+      }
+      
+      .module-card {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div id="app">Loading...</div>
   <script>
     window.$docsify = {
-      name: 'Power BI Learning Course',
-      repo: 'https://github.com/Gomathikrishna/PL-300-Power-BI-Tamil',
+      name: 'PL-300 Power BI Tamil',
+      repo: 'https://github.com/gomathikrishna/PL-300-Power-BI-Tamil',
       loadSidebar: true,
-      loadNavbar: true,
       coverpage: true,
       onlyCover: false,
       maxLevel: 4,
@@ -45,85 +198,64 @@
       search: {
         maxAge: 86400000,
         paths: 'auto',
-        placeholder: 'Search the course...',
-        noData: 'No results found',
+        placeholder: 'Search the course... / பாடத்தைத் தேடுங்கள்...',
+        noData: 'No results found / முடிவுகள் எதுவும் கிடைக்கவில்லை',
         depth: 4,
         hideOtherSidebarContent: false,
       },
 
       // Copy code configuration
       copyCode: {
-        buttonText: 'Copy',
-        errorText: 'Error',
-        successText: 'Copied'
-      },
-
-      // Pagination
-      pagination: {
-        previousText: 'Previous',
-        nextText: 'Next',
-        crossChapter: true,
-        crossChapterText: true,
-      },
-
-      // Progress indicator
-      progress: {
-        position: "top",
-        color: "var(--theme-color,#0078d4)",
-        height: "3px",
-      },
-
-      // Tab configuration
-      tabs: {
-        persist: true,
-        sync: true,
-        theme: 'classic',
-        tabComments: true,
-        tabHeadings: true
+        buttonText: 'Copy / நகலெடு',
+        errorText: 'Error / பிழை',
+        successText: 'Copied / நகலெடுக்கப்பட்டது'
       },
 
       // Flexible alerts
       'flexible-alerts': {
         style: 'flat',
         note: {
-          label: "Note"
+          label: "குறிப்பு / Note"
         },
         tip: {
-          label: "Tip"
+          label: "உதவிக்குறிப்பு / Tip"
         },
         warning: {
-          label: "Warning"
+          label: "எச்சரிக்கை / Warning"
         },
         danger: {
-          label: "Important"
+          label: "முக்கியம் / Important"
         }
       },
 
-      // Count configuration
-      count: {
-        countable: true,
-        fontsize: '0.9em',
-        color: 'rgb(90,90,90)',
-        language: 'english'
-      }
+      // Plugins configuration
+      plugins: [
+        // Custom plugin for Tamil content support
+        function(hook, vm) {
+          hook.ready(function() {
+            console.log('PL-300 Power BI Tamil Course loaded successfully!');
+          });
+          
+          hook.doneEach(function() {
+            // Add Tamil language support
+            document.querySelectorAll('.tamil').forEach(function(el) {
+              el.style.fontFamily = 'var(--tamil-font)';
+            });
+          });
+        }
+      ]
     }
   </script>
   
   <!-- Docsify core -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   
-  <!-- Plugins -->
+  <!-- Essential plugins only -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
   
   <!-- Language highlighting -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-dax.min.js"></script>
@@ -131,16 +263,92 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>
 
-  <!-- Custom scripts -->
-  <script src="assets/js/custom.js"></script>
-  
-  <!-- Google Analytics (replace with your tracking ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+  <!-- Custom JavaScript for Tamil course -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_TRACKING_ID');
+    // Custom functionality for Tamil course
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add helpful features
+      console.log('🎯 PL-300 Power BI Tamil Course initialized');
+      
+      // Add progress tracking
+      const progressKey = 'pl300-tamil-progress';
+      
+      // Simple progress tracking
+      function trackProgress(lessonId) {
+        let progress = JSON.parse(localStorage.getItem(progressKey) || '{}');
+        progress[lessonId] = {
+          completed: true,
+          completedAt: new Date().toISOString()
+        };
+        localStorage.setItem(progressKey, JSON.stringify(progress));
+        console.log('Progress saved for:', lessonId);
+      }
+      
+      // Add video tracking
+      document.addEventListener('click', function(e) {
+        if (e.target.closest('a[href*="youtube.com"]')) {
+          const link = e.target.closest('a');
+          const lessonId = link.textContent.trim().replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+          trackProgress(lessonId);
+        }
+      });
+      
+      // Add keyboard shortcuts
+      document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey || e.metaKey) {
+          switch(e.key) {
+            case '/':
+              e.preventDefault();
+              const searchBox = document.querySelector('.search input');
+              if (searchBox) {
+                searchBox.focus();
+              }
+              break;
+            case 'h':
+              e.preventDefault();
+              window.location.hash = '#/';
+              break;
+          }
+        }
+      });
+    });
+
+    // Add scroll to top functionality
+    window.addEventListener('scroll', function() {
+      if (!document.querySelector('.scroll-to-top')) {
+        const scrollBtn = document.createElement('button');
+        scrollBtn.innerHTML = '↑';
+        scrollBtn.className = 'scroll-to-top';
+        scrollBtn.style.cssText = `
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background: var(--theme-color);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+          opacity: 0;
+          transition: all 0.3s ease;
+          z-index: 1000;
+          font-size: 18px;
+          font-weight: bold;
+        `;
+        scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.body.appendChild(scrollBtn);
+      }
+      
+      const scrollBtn = document.querySelector('.scroll-to-top');
+      if (scrollBtn) {
+        if (window.pageYOffset > 300) {
+          scrollBtn.style.opacity = '1';
+        } else {
+          scrollBtn.style.opacity = '0';
+        }
+      }
+    });
   </script>
 </body>
 </html>
