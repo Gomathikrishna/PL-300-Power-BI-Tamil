@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PL-300 Power BI Tamil Course</title>
+    <title>PL-300 Power BI Tamil Course - Complete Learning Path</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap');
         
@@ -22,7 +22,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -45,84 +45,234 @@
             opacity: 0.9;
         }
         
-        .content {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            margin: 40px 0;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        .promo-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
         }
         
-        .course-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        .promo-link {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .promo-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.15);
+        }
+        
+        .learning-path {
+            margin: 40px 0;
+            border: 2px solid #e3f2fd;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .path-header {
+            background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+            color: white;
+            padding: 25px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .path-content {
+            padding: 30px;
+        }
+        
+        .module-section {
             margin: 30px 0;
         }
         
-        .course-card {
+        .module-title {
             background: #f8f9fa;
-            border-radius: 10px;
-            padding: 25px;
-            border-left: 5px solid #0078d4;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .course-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-        
-        .course-title {
             color: #0078d4;
+            padding: 15px 20px;
+            border-left: 5px solid #0078d4;
             font-size: 1.3rem;
-            margin-bottom: 10px;
             font-weight: 600;
+            margin-bottom: 20px;
+            border-radius: 0 10px 10px 0;
         }
         
-        .course-description {
-            margin-bottom: 15px;
+        .video-item {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .video-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #0078d4;
+        }
+        
+        .video-number {
+            background: #0078d4;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .video-details {
+            flex: 1;
+        }
+        
+        .video-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        
+        .video-title-tamil {
             color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
         }
         
         .video-link {
-            display: inline-block;
             background: #ff6b35;
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 25px;
             font-weight: 500;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
         
         .video-link:hover {
             background: #e55a2b;
+            transform: scale(1.05);
         }
         
-        .tamil {
-            font-weight: 500;
-            color: #2d3748;
+        .lab-section {
+            background: #fff8e1;
+            border: 2px solid #ffb74d;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .lab-header {
+            color: #f57c00;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .lab-icon {
+            background: #ff9800;
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .lab-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-left: 4px solid #ff9800;
+            transition: all 0.3s ease;
+        }
+        
+        .lab-item:hover {
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.2);
+            transform: translateX(5px);
+        }
+        
+        .lab-title {
+            font-weight: 600;
+            color: #f57c00;
+            margin-bottom: 8px;
+        }
+        
+        .lab-title-tamil {
+            color: #666;
+            margin-bottom: 10px;
         }
         
         .progress-section {
-            background: #e3f2fd;
-            border-radius: 10px;
-            padding: 25px;
-            margin: 30px 0;
+            background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
         }
         
         .progress-title {
-            color: #1976d2;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .progress-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .progress-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .progress-card-title {
+            color: #2e7d32;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
         }
         
         .lesson-item {
             display: flex;
             align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
         }
         
         .lesson-item:last-child {
@@ -130,19 +280,71 @@
         }
         
         .lesson-checkbox {
-            margin-right: 15px;
-            transform: scale(1.2);
+            margin-right: 12px;
+            transform: scale(1.3);
+            accent-color: #2e7d32;
         }
         
         .lesson-text {
             flex: 1;
+            font-size: 0.95rem;
+        }
+        
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-top: 4px solid #0078d4;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0078d4;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-weight: 500;
         }
         
         .footer {
             text-align: center;
             color: white;
             padding: 40px 0;
+            opacity: 0.9;
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+        }
+        
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
             opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            opacity: 1;
+        }
+        
+        .tamil {
+            font-weight: 500;
+            color: #2d3748;
         }
         
         @media (max-width: 768px) {
@@ -158,9 +360,44 @@
                 padding: 20px;
             }
             
-            .course-grid {
-                grid-template-columns: 1fr;
+            .promo-links {
+                flex-direction: column;
+                align-items: center;
             }
+            
+            .video-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .video-number {
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+            
+            .stats-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .completion-badge {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .completion-badge.show {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -170,196 +407,259 @@
             <h1>🎯 PL-300 Power BI Tamil Course</h1>
             <p class="subtitle">
                 <span class="tamil">Microsoft Power BI-ஐ தமிழில் கற்றுக்கொள்ளுங்கள்</span><br>
-                Learn Microsoft Power BI in Tamil
+                Complete Learning Path for Microsoft PL-300 Certification
             </p>
+            
+            <div class="promo-links">
+                <a href="https://www.udemy.com/course/pl-300-power-bi-certification-course-in-tamil/learn/lecture/50213647#overview" 
+                   target="_blank" class="promo-link">
+                    🎓 Udemy Course
+                </a>
+                <a href="https://youtube.com/@gomstechtalks?sub_confirmation=1" 
+                   target="_blank" class="promo-link">
+                    📺 YouTube Channel
+                </a>
+                <a href="https://beacons.ai/techtutorial" 
+                   target="_blank" class="promo-link">
+                    💼 Interview Questions
+                </a>
+                <a href="https://github.com/Gomathikrishna/PL-300-Power-BI-Tamil" 
+                   target="_blank" class="promo-link">
+                    📁 GitHub Repository
+                </a>
+            </div>
         </header>
 
-        <div class="content">
-            <h2>📚 <span class="tamil">பாடத்திட்டம் (Course Curriculum)</span></h2>
-            
-            <div class="course-grid">
-                <div class="course-card">
-                    <div class="course-title">1. Data Analysis கண்டுபிடித்தல்</div>
-                    <div class="course-description">
-                        <span class="tamil">தரவு பகுப்பாய்வின் அடிப்படைகளை கற்றுக்கொள்ளுங்கள்</span><br>
-                        Learn the fundamentals of data analysis
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=Mb2Zn1zOJ2Q&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=1&t=89s" 
-                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-title">2. Microsoft Fabric அறிமுகம்</div>
-                    <div class="course-description">
-                        <span class="tamil">Microsoft Fabric-ன் அறிமுகம் மற்றும் Copilot</span><br>
-                        Introduction to Microsoft Fabric and Copilot
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=9MbHHvkcf9c&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=39" 
-                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-title">3. Power BI இல் தரவு பெறுதல்</div>
-                    <div class="course-description">
-                        <span class="tamil">பல்வேறு மூலங்களிலிருந்து தரவை எவ்வாறு பெறுவது</span><br>
-                        How to get data from various sources
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=B3HXUu6tKaY&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=2&t=153s" 
-                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-title">4. தரவு சுத்தம் மற்றும் உருமாற்றம்</div>
-                    <div class="course-description">
-                        <span class="tamil">தரவை சுத்தம் செய்து, உருமாற்றி, ஏற்றுதல்</span><br>
-                        Clean, transform, and load data
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=z6NF8tr9PMo&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=8" 
-                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-title">5. Semantic Model உள்ளமைவு</div>
-                    <div class="course-description">
-                        <span class="tamil">தரவு மாடல்களை உருவாக்கி உள்ளமைத்தல்</span><br>
-                        Configure and create data models
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=pTR5XCU2N38&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=11" 
-                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-title">6. DAX ஃபார்முலாக்கள்</div>
-                    <div class="course-description">
-                        <span class="tamil">DAX மொழியில் ஃபார்முலாக்களை எழுதுதல்</span><br>
-                        Write formulas in DAX language
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=yU2T-IEspGI&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=12" 
-                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-title">7. அறிக்கை வடிவமைப்பு</div>
-                    <div class="course-description">
-                        <span class="tamil">பயனர் நட்பு அறிக்கைகளை வடிவமைத்தல்</span><br>
-                        Design user-friendly reports
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=qlUTgxhQPcI&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=26" 
-                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-title">8. Dashboards உருவாக்குதல்</div>
-                    <div class="course-description">
-                        <span class="tamil">ஊடாடும் டாஷ்போர்டுகளை உருவாக்குதல்</span><br>
-                        Create interactive dashboards
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=JlTqftpqADk&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=33" 
-                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
-                </div>
-            </div>
-
-            <div class="progress-section">
-                <h3 class="progress-title">📊 <span class="tamil">முன்னேற்ற கண்காணிப்பு (Progress Tracking)</span></h3>
-                <div class="lesson-item">
-                    <input type="checkbox" class="lesson-checkbox" id="lesson1">
-                    <label for="lesson1" class="lesson-text">Data Analysis அடிப்படைகள்</label>
-                </div>
-                <div class="lesson-item">
-                    <input type="checkbox" class="lesson-checkbox" id="lesson2">
-                    <label for="lesson2" class="lesson-text">Microsoft Fabric அறிமுகம்</label>
-                </div>
-                <div class="lesson-item">
-                    <input type="checkbox" class="lesson-checkbox" id="lesson3">
-                    <label for="lesson3" class="lesson-text">தரவு பெறுதல்</label>
-                </div>
-                <div class="lesson-item">
-                    <input type="checkbox" class="lesson-checkbox" id="lesson4">
-                    <label for="lesson4" class="lesson-text">தரவு சுத்தம் மற்றும் உருமாற்றம்</label>
-                </div>
-                <div class="lesson-item">
-                    <input type="checkbox" class="lesson-checkbox" id="lesson5">
-                    <label for="lesson5" class="lesson-text">Semantic Model உள்ளமைவு</label>
-                </div>
-                <div class="lesson-item">
-                    <input type="checkbox" class="lesson-checkbox" id="lesson6">
-                    <label for="lesson6" class="lesson-text">DAX ஃபார்முலாக்கள்</label>
-                </div>
-                <div class="lesson-item">
-                    <input type="checkbox" class="lesson-checkbox" id="lesson7">
-                    <label for="lesson7" class="lesson-text">அறிக்கை வடிவமைப்பு</label>
-                </div>
-                <div class="lesson-item">
-                    <input type="checkbox" class="lesson-checkbox" id="lesson8">
-                    <label for="lesson8" class="lesson-text">Dashboards உருவாக்குதல்</label>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin: 40px 0;">
-                <h3>🔗 <span class="tamil">முக்கியமான இணைப்புகள் (Important Links)</span></h3>
-                <p style="margin: 20px 0;">
-                    <a href="https://github.com/Gomathikrishna/PL-300-Power-BI-Tamil" 
-                       style="background: #333; color: white; text-decoration: none; padding: 12px 24px; border-radius: 6px; margin: 10px;">
-                        📁 GitHub Repository
-                    </a>
-                    <a href="https://powerbi.microsoft.com/desktop/" 
-                       style="background: #0078d4; color: white; text-decoration: none; padding: 12px 24px; border-radius: 6px; margin: 10px;">
-                        💻 Download Power BI Desktop
-                    </a>
-                </p>
-            </div>
+        <div class="completion-badge" id="completionBadge">
+            🎉 <span class="tamil">முன்னேற்றம் சேமிக்கப்பட்டது!</span>
         </div>
 
-        <footer class="footer">
-            <p>
-                <span class="tamil">உருவாக்கியவர்: Gomathikrishna</span><br>
-                Created by: Gomathikrishna<br>
-                <span class="tamil">மகிழ்ச்சியான கற்றல்! 🚀</span> Happy Learning! 🚀
-            </p>
-        </footer>
-    </div>
+        <div class="content">
+            <div class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalVideos">25+</div>
+                    <div class="stat-label"><span class="tamil">வீடியோ பாடங்கள்</span><br>Video Lessons</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalLabs">12+</div>
+                    <div class="stat-label"><span class="tamil">நடைமுறை பயிற்சிகள்</span><br>Hands-on Labs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="completedCount">0</div>
+                    <div class="stat-label"><span class="tamil">முடிக்கப்பட்டவை</span><br>Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="progressPercent">0%</div>
+                    <div class="stat-label"><span class="tamil">முன்னேற்றம்</span><br>Progress</div>
+                </div>
+            </div>
 
-    <script>
-        // Simple progress tracking
-        const checkboxes = document.querySelectorAll('.lesson-checkbox');
-        
-        // Load saved progress
-        checkboxes.forEach((checkbox, index) => {
-            const saved = localStorage.getItem(`lesson-${index + 1}`);
-            if (saved === 'true') {
-                checkbox.checked = true;
-            }
-            
-            // Save progress when changed
-            checkbox.addEventListener('change', function() {
-                localStorage.setItem(`lesson-${index + 1}`, this.checked);
-                updateProgress();
-            });
-        });
-        
-        function updateProgress() {
-            const completed = Array.from(checkboxes).filter(cb => cb.checked).length;
-            const total = checkboxes.length;
-            const percentage = Math.round((completed / total) * 100);
-            
-            console.log(`Progress: ${completed}/${total} (${percentage}%)`);
-            
-            // Show completion message
-            if (completed === total) {
-                alert('🎉 வாழ்த்துக்கள்! நீங்கள் அனைத்து பாடங்களையும் முடித்துவிட்டீர்கள்!\n\nCongratulations! You have completed all lessons!');
-            }
-        }
-        
-        // Initial progress update
-        updateProgress();
-        
-        // Add click tracking for video links
-        document.querySelectorAll('.video-link').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log('Video clicked:', this.href);
-                // You can add analytics tracking here
-            });
-        });
-    </script>
-</body>
-</html>
+            <!-- Learning Path 1: Get Started -->
+            <div class="learning-path">
+                <div class="path-header">
+                    📈 Learning Path 1: Get Started with Microsoft Data Analytics
+                    <br><span class="tamil" style="font-size: 1.2rem;">Microsoft தரவு பகுப்பாய்வைத் தொடங்குங்கள்</span>
+                </div>
+                <div class="path-content">
+                    <div class="module-section">
+                        <div class="video-item">
+                            <div class="video-number">1.1</div>
+                            <div class="video-details">
+                                <div class="video-title">Discover Data Analysis and Get Started with Power BI</div>
+                                <div class="video-title-tamil"><span class="tamil">தரவு பகுப்பாய்வு கண்டுபிடித்தல் மற்றும் Power BI தொடங்குதல்</span></div>
+                                <a href="https://www.youtube.com/watch?v=Mb2Zn1zOJ2Q&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=1&t=89s" 
+                                   target="_blank" class="video-link" data-lesson="1-1">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+
+                        <div class="video-item">
+                            <div class="video-number">1.2</div>
+                            <div class="video-details">
+                                <div class="video-title">Introduction to End-to-End Analytics using Microsoft Fabric</div>
+                                <div class="video-title-tamil"><span class="tamil">Microsoft Fabric பயன்படுத்தி முழுமையான Analytics அறிமுகம்</span></div>
+                                <a href="https://www.youtube.com/watch?v=9MbHHvkcf9c&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=39" 
+                                   target="_blank" class="video-link" data-lesson="1-2">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Path 2: Prepare Data -->
+            <div class="learning-path">
+                <div class="path-header">
+                    🔧 Learning Path 2: Prepare Data for Analysis with Power BI
+                    <br><span class="tamil" style="font-size: 1.2rem;">Power BI-க்கு தரவை தயார்படுத்துதல்</span>
+                </div>
+                <div class="path-content">
+                    <div class="module-section">
+                        <div class="module-title">Module 2.1: Get Data in Power BI</div>
+                        
+                        <div class="video-item">
+                            <div class="video-number">2.1</div>
+                            <div class="video-details">
+                                <div class="video-title">Get Data in Power BI</div>
+                                <div class="video-title-tamil"><span class="tamil">Power BI இல் தரவு பெறுதல்</span></div>
+                                <a href="https://www.youtube.com/watch?v=B3HXUu6tKaY&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=2&t=153s" 
+                                   target="_blank" class="video-link" data-lesson="2-1">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+
+                        <div class="lab-section">
+                            <div class="lab-header">
+                                <div class="lab-icon">🧪</div>
+                                Lab Exercise: Get Data in Power BI
+                            </div>
+                            <div class="lab-item">
+                                <div class="lab-title">Part 1: Data Connection Basics</div>
+                                <div class="lab-title-tamil"><span class="tamil">பாகம் 1: தரவு இணைப்பு அடிப்படைகள்</span></div>
+                                <a href="https://www.youtube.com/watch?v=XGlYk-Riyg8&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=3" 
+                                   target="_blank" class="video-link" data-lesson="lab2-1a">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                            <div class="lab-item">
+                                <div class="lab-title">Part 2: Advanced Data Sources</div>
+                                <div class="lab-title-tamil"><span class="tamil">பாகம் 2: மேம்பட்ட தரவு மூலங்கள்</span></div>
+                                <a href="https://www.youtube.com/watch?v=WFqE7yNEhU8&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=4" 
+                                   target="_blank" class="video-link" data-lesson="lab2-1b">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <div class="module-title">Module 2.2: Clean, Transform, and Load Data</div>
+                        
+                        <div class="video-item">
+                            <div class="video-number">2.2a</div>
+                            <div class="video-details">
+                                <div class="video-title">Merge and Append Data</div>
+                                <div class="video-title-tamil"><span class="tamil">தரவை இணைத்தல் மற்றும் சேர்த்தல்</span></div>
+                                <a href="https://www.youtube.com/watch?v=z6NF8tr9PMo&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=8" 
+                                   target="_blank" class="video-link" data-lesson="2-2a">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+
+                        <div class="video-item">
+                            <div class="video-number">2.2b</div>
+                            <div class="video-details">
+                                <div class="video-title">Pivot and Transpose Data</div>
+                                <div class="video-title-tamil"><span class="tamil">தரவை Pivot மற்றும் Transpose செய்தல்</span></div>
+                                <a href="https://www.youtube.com/watch?v=BNLKAu0OFqM&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=10" 
+                                   target="_blank" class="video-link" data-lesson="2-2b">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+
+                        <div class="lab-section">
+                            <div class="lab-header">
+                                <div class="lab-icon">🧪</div>
+                                Lab Exercise: Load Data in Power BI Desktop
+                            </div>
+                            <div class="lab-item">
+                                <div class="lab-title">Data Transformation Practice</div>
+                                <div class="lab-title-tamil"><span class="tamil">தரவு உருமாற்ற பயிற்சி</span></div>
+                                <a href="https://www.youtube.com/watch?v=f-jLMCufJSU&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=7" 
+                                   target="_blank" class="video-link" data-lesson="lab2-2">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Path 3: Model Data -->
+            <div class="learning-path">
+                <div class="path-header">
+                    🏗️ Learning Path 3: Model Data with Power BI
+                    <br><span class="tamil" style="font-size: 1.2rem;">Power BI உடன் தரவு மாடலிங்</span>
+                </div>
+                <div class="path-content">
+                    <div class="module-section">
+                        <div class="module-title">Module 3.1: Configure a Semantic Model</div>
+                        
+                        <div class="video-item">
+                            <div class="video-number">3.1</div>
+                            <div class="video-details">
+                                <div class="video-title">Configure a Semantic Model</div>
+                                <div class="video-title-tamil"><span class="tamil">Semantic Model உள்ளமைத்தல்</span></div>
+                                <a href="https://www.youtube.com/watch?v=pTR5XCU2N38&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=11" 
+                                   target="_blank" class="video-link" data-lesson="3-1">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+
+                        <div class="lab-section">
+                            <div class="lab-header">
+                                <div class="lab-icon">🧪</div>
+                                Lab Exercise: Configure Semantic Model in Power BI Desktop
+                            </div>
+                            <div class="lab-item">
+                                <div class="lab-title">Model Configuration Practice</div>
+                                <div class="lab-title-tamil"><span class="tamil">மாடல் உள்ளமைவு பயிற்சி</span></div>
+                                <a href="https://www.youtube.com/watch?v=XV_2DQsDzn0&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=16" 
+                                   target="_blank" class="video-link" data-lesson="lab3-1">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <div class="module-title">Module 3.2: Write DAX Formulas</div>
+                        
+                        <div class="video-item">
+                            <div class="video-number">3.2</div>
+                            <div class="video-details">
+                                <div class="video-title">Write DAX Formulas for Semantic Models</div>
+                                <div class="video-title-tamil"><span class="tamil">Semantic Models-க்கு DAX ஃபார்முலாக்கள் எழுதுதல்</span></div>
+                                <a href="https://www.youtube.com/watch?v=yU2T-IEspGI&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=12" 
+                                   target="_blank" class="video-link" data-lesson="3-2">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <div class="module-title">Module 3.3: Create DAX Calculations</div>
+                        
+                        <div class="video-item">
+                            <div class="video-number">3.3</div>
+                            <div class="video-details">
+                                <div class="video-title">Create DAX Calculations in Semantic Models</div>
+                                <div class="video-title-tamil"><span class="tamil">Semantic Models இல் DAX கணக்கீடுகள் உருவாக்குதல்</span></div>
+                                <a href="https://www.youtube.com/watch?v=Y0fnGZQ0ZJY&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=13" 
+                                   target="_blank" class="video-link" data-lesson="3-3">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+
+                        <div class="lab-section">
+                            <div class="lab-header">
+                                <div class="lab-icon">🧪</div>
+                                Lab Exercise: Create DAX Calculations
+                            </div>
+                            <div class="lab-item">
+                                <div class="lab-title">DAX Calculations Practice</div>
+                                <div class="lab-title-tamil"><span class="tamil">DAX கணக்கீடுகள் பயிற்சி</span></div>
+                                <a href="https://www.youtube.com/watch?v=t52dlp6ynGw&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=17" 
+                                   target="_blank" class="video-link" data-lesson="lab3-3">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <div class="module-title">Module 3.4: DAX Time Intelligence Functions</div>
+                        
+                        <div class="lab-section">
+                            <div class="lab-header">
+                                <div class="lab-icon">🧪</div>
+                                Lab Exercise: Modify DAX Filter
+                            </div>
+                            <div class="lab-item">
+                                <div class="lab-title">DAX Filter Modification</div>
+                                <div class="lab-title-tamil"><span class="tamil">DAX வடிகட்டி மாற்றம்</span></div>
+                                <a href="https://www.youtube.com/watch?v=ub7lKcCp1Fg&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=21" 
+                                   target="_blank" class="video-link" data-lesson="lab3-4a">📺 பார்க்கவும் / Watch</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <div class="module-title">Module 3.5: Visual Calculations</div>
+                        
+                        <div class="video-item">
+                            <div class="video-number">3.5</div>
+                            <div class="video-details">
+                                <div class="video-title">Create Visual Calculations in Power BI Desktop</div>
