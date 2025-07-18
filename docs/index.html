@@ -347,6 +347,26 @@
             color: #2d3748;
         }
         
+        .completion-badge {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .completion-badge.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -378,26 +398,6 @@
             .stats-section {
                 grid-template-columns: repeat(2, 1fr);
             }
-        }
-        
-        .completion-badge {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: 600;
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        
-        .completion-badge.show {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
@@ -1005,11 +1005,11 @@
     </div>
 
     <script>
-        // Enhanced progress tracking with local storage
+        // Enhanced progress tracking system
         const STORAGE_KEY = 'pl300-tamil-course-progress';
         let courseProgress = {};
 
-        // Load saved progress
+        // Load saved progress from localStorage
         function loadProgress() {
             try {
                 const saved = localStorage.getItem(STORAGE_KEY);
@@ -1017,22 +1017,22 @@
                     courseProgress = JSON.parse(saved);
                 }
             } catch (e) {
-                console.log('Could not load progress');
+                console.log('Could not load progress from localStorage');
                 courseProgress = {};
             }
         }
 
-        // Save progress to local storage
+        // Save progress to localStorage
         function saveProgress() {
             try {
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(courseProgress));
                 showCompletionBadge();
             } catch (e) {
-                console.log('Could not save progress');
+                console.log('Could not save progress to localStorage');
             }
         }
 
-        // Show completion badge
+        // Show completion badge notification
         function showCompletionBadge() {
             const badge = document.getElementById('completionBadge');
             badge.classList.add('show');
@@ -1041,7 +1041,7 @@
             }, 3000);
         }
 
-        // Update statistics
+        // Update statistics display
         function updateStats() {
             const allCheckboxes = document.querySelectorAll('.lesson-checkbox');
             const completedCheckboxes = Array.from(allCheckboxes).filter(cb => cb.checked);
@@ -1053,7 +1053,7 @@
             document.getElementById('completedCount').textContent = completedCount;
             document.getElementById('progressPercent').textContent = progressPercent + '%';
 
-            // Celebrate completion
+            // Check for course completion
             if (progressPercent === 100 && totalLessons > 0) {
                 setTimeout(() => {
                     if (confirm('🎉 வாழ்த்துக்கள்! நீங்கள் அனைத்து பாடங்களையும் முடித்துவிட்டீர்கள்!\n\nCongratulations! You have completed the entire course!\n\nWould you like to visit the Udemy course for certification preparation?')) {
@@ -1077,7 +1077,7 @@
                     checkbox.checked = true;
                 }
                 
-                // Add event listener
+                // Add event listener for changes
                 checkbox.addEventListener('change', function() {
                     if (this.checked) {
                         courseProgress[lessonId] = {
@@ -1096,26 +1096,22 @@
             updateStats();
         }
 
-        // Track video clicks
+        // Track video link clicks
         function trackVideoClicks() {
             const videoLinks = document.querySelectorAll('.video-link');
             
             videoLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     const lessonId = this.getAttribute('data-lesson');
-                    const checkboxId = 'progress-' + lessonId;
-                    const checkbox = document.getElementById(checkboxId);
-                    
-                    // Mark as viewed (optional - you might want manual checking)
                     console.log('Video clicked:', lessonId);
                     
-                    // Analytics tracking
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'video_click', {
-                            'lesson_id': lessonId,
-                            'video_url': this.href
-                        });
-                    }
+                    // Optional: Auto-mark as viewed when video is clicked
+                    // const checkboxId = 'progress-' + lessonId;
+                    // const checkbox = document.getElementById(checkboxId);
+                    // if (checkbox && !checkbox.checked) {
+                    //     checkbox.checked = true;
+                    //     checkbox.dispatchEvent(new Event('change'));
+                    // }
                 });
             });
         }
@@ -1131,48 +1127,12 @@
                             break;
                         case 'p':
                             e.preventDefault();
-                            document.querySelector('.progress-section').scrollIntoView({ behavior: 'smooth' });
+                            const progressSection = document.querySelector('.progress-section');
+                            if (progressSection) {
+                                progressSection.scrollIntoView({ behavior: 'smooth' });
+                            }
                             break;
                     }
-                }
-            });
-        }
-
-        // Smooth scroll for internal links
-        function initializeSmoothScroll() {
-            document.querySelectorAll('a[href^="#"]').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-        }
-
-        // Add learning path completion tracking
-        function trackPathCompletion() {
-            const paths = {
-                'path1': ['progress-1-1', 'progress-1-2'],
-                'path2': ['progress-2-1', 'progress-lab2-1a', 'progress-lab2-1b', 'progress-2-2a', 'progress-2-2b', 'progress-lab2-2'],
-                'path3': ['progress-3-1', 'progress-lab3-1', 'progress-3-2', 'progress-3-3', 'progress-lab3-3', 'progress-lab3-4a', 'progress-3-5', 'progress-lab3-5', 'progress-3-6'],
-                'path4': ['progress-4-1', 'progress-lab4-1', 'progress-4-4', 'progress-lab4-4', 'progress-4-5'],
-                'path5': ['progress-lab5-4', 'progress-5-5'],
-                'path6': ['progress-6-1']
-            };
-
-            Object.entries(paths).forEach(([pathId, lessonIds]) => {
-                const completedLessons = lessonIds.filter(id => {
-                    const checkbox = document.getElementById(id);
-                    return checkbox && checkbox.checked;
-                }).length;
-                
-                const pathProgress = Math.round((completedLessons / lessonIds.length) * 100);
-                
-                if (pathProgress === 100) {
-                    // Mark path as completed
-                    console.log(`Path ${pathId} completed!`);
                 }
             });
         }
@@ -1182,281 +1142,11 @@
             initializeProgress();
             trackVideoClicks();
             addKeyboardShortcuts();
-            initializeSmoothScroll();
-            
-            // Update stats every few seconds
-            setInterval(() => {
-                trackPathCompletion();
-            }, 5000);
             
             console.log('🎯 PL-300 Power BI Tamil Course loaded successfully!');
-            console.log('📊 Progress tracking enabled');
+            console.log('📊 Progress tracking enabled with localStorage');
             console.log('⌨️ Keyboard shortcuts: Ctrl+H (Home), Ctrl+P (Progress)');
-        });
-
-        // Add floating progress indicator
-        function createFloatingProgress() {
-            const floatingProgress = document.createElement('div');
-            floatingProgress.id = 'floatingProgress';
-            floatingProgress.style.cssText = `
-                position: fixed;
-                bottom: 20px;
-                left: 20px;
-                background: rgba(0, 120, 212, 0.9);
-                color: white;
-                padding: 10px 15px;
-                border-radius: 20px;
-                font-size: 14px;
-                font-weight: 600;
-                z-index: 1000;
-                opacity: 0;
-                transform: translateY(20px);
-                transition: all 0.3s ease;
-                backdrop-filter: blur(10px);
-            `;
-            document.body.appendChild(floatingProgress);
-
-            // Show/hide based on scroll
-            let isVisible = false;
-            window.addEventListener('scroll', () => {
-                const shouldShow = window.pageYOffset > 300;
-                if (shouldShow && !isVisible) {
-                    floatingProgress.style.opacity = '1';
-                    floatingProgress.style.transform = 'translateY(0)';
-                    isVisible = true;
-                } else if (!shouldShow && isVisible) {
-                    floatingProgress.style.opacity = '0';
-                    floatingProgress.style.transform = 'translateY(20px)';
-                    isVisible = false;
-                }
-
-                // Update progress text
-                const allCheckboxes = document.querySelectorAll('.lesson-checkbox');
-                const completedCheckboxes = Array.from(allCheckboxes).filter(cb => cb.checked);
-                const progressPercent = allCheckboxes.length > 0 ? Math.round((completedCheckboxes.length / allCheckboxes.length) * 100) : 0;
-                floatingProgress.textContent = `📊 ${progressPercent}% முடிந்தது`;
-            });
-
-            // Click to scroll to progress section
-            floatingProgress.addEventListener('click', () => {
-                document.querySelector('.progress-section').scrollIntoView({ behavior: 'smooth' });
-            });
-        }
-
-        // Initialize floating progress after DOM is ready
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(createFloatingProgress, 1000);
-        });
-
-        // Add course completion certificate generator
-        function generateCertificate() {
-            const userName = prompt('உங்கள் பெயரை உள்ளிடுங்கள் / Enter your name for the certificate:') || 'Course Participant';
-            const completionDate = new Date().toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-            });
-            
-            const certificateHTML = `
-                <div style="
-                    width: 800px;
-                    height: 600px;
-                    border: 10px solid #0078d4;
-                    padding: 50px;
-                    text-align: center;
-                    font-family: 'Noto Sans Tamil', Arial, sans-serif;
-                    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
-                    position: relative;
-                    margin: 20px auto;
-                ">
-                    <div style="border: 3px solid #ff6b35; padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                        <h1 style="color: #0078d4; font-size: 48px; margin-bottom: 20px;">Certificate of Completion</h1>
-                        <h2 style="color: #0078d4; font-size: 24px; margin-bottom: 30px;">நிறைவு சான்றிதழ்</h2>
-                        <div style="height: 2px; background: #0078d4; margin: 20px auto; width: 200px;"></div>
-                        <p style="font-size: 24px; margin: 30px 0;">This is to certify that</p>
-                        <h2 style="color: #323130; font-size: 36px; margin: 20px 0; text-decoration: underline; color: #ff6b35;">${userName}</h2>
-                        <p style="font-size: 24px; margin: 30px 0;">has successfully completed the</p>
-                        <h3 style="color: #0078d4; font-size: 32px; margin: 20px 0;">PL-300 Power BI Tamil Course</h3>
-                        <p style="font-size: 18px; margin: 20px 0; color: #666;">Microsoft Power BI-ஐ தமிழில் கற்றுக்கொள்ளுதல்</p>
-                        <p style="font-size: 16px; margin: 20px 0; color: #666;">Covering data analysis, modeling, visualization, and Power BI best practices</p>
-                        <p style="font-size: 16px; margin-top: 40px;">Completed on: ${completionDate}</p>
-                        <div style="position: absolute; bottom: 20px; right: 20px; font-size: 12px; color: #605e5c;">
-                            Created by: Gomathikrishna<br>
-                            Course: gomathikrishna.github.io/PL-300-Power-BI-Tamil
-                        </div>
-                        <div style="position: absolute; bottom: 20px; left: 20px; font-size: 12px; color: #605e5c;">
-                            🎯 PL-300 Tamil Course
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            const newWindow = window.open('', '_blank');
-            newWindow.document.write(`
-                <html>
-                    <head>
-                        <title>PL-300 Power BI Tamil Course Certificate</title>
-                        <style>
-                            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap');
-                            body { 
-                                margin: 0; 
-                                padding: 20px; 
-                                display: flex; 
-                                justify-content: center; 
-                                align-items: center; 
-                                min-height: 100vh; 
-                                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                                font-family: 'Noto Sans Tamil', Arial, sans-serif;
-                            }
-                            @media print {
-                                body { background: white; }
-                            }
-                        </style>
-                    </head>
-                    <body>
-                        ${certificateHTML}
-                        <script>
-                            window.onload = function() {
-                                if (confirm('Would you like to print this certificate? / இந்த சான்றிதழை அச்சிட விரும்புகிறீர்களா?')) {
-                                    window.print();
-                                }
-                            }
-                        </script>
-                    </body>
-                </html>
-            `);
-        }
-
-        // Check for course completion and offer certificate
-        function checkCourseCompletion() {
-            const allCheckboxes = document.querySelectorAll('.lesson-checkbox');
-            const completedCheckboxes = Array.from(allCheckboxes).filter(cb => cb.checked);
-            const progressPercent = allCheckboxes.length > 0 ? Math.round((completedCheckboxes.length / allCheckboxes.length) * 100) : 0;
-
-            if (progressPercent === 100 && allCheckboxes.length > 0) {
-                // Create certificate button if it doesn't exist
-                if (!document.getElementById('certificateButton')) {
-                    const certificateButton = document.createElement('button');
-                    certificateButton.id = 'certificateButton';
-                    certificateButton.innerHTML = '🎓 Generate Certificate / சான்றிதழ் பெறுங்கள்';
-                    certificateButton.style.cssText = `
-                        position: fixed;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
-                        color: white;
-                        border: none;
-                        padding: 20px 40px;
-                        border-radius: 30px;
-                        font-size: 18px;
-                        font-weight: 600;
-                        cursor: pointer;
-                        z-index: 10000;
-                        box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
-                        animation: pulse 2s infinite;
-                        font-family: 'Noto Sans Tamil', Arial, sans-serif;
-                    `;
-                    
-                    // Add pulsing animation
-                    const style = document.createElement('style');
-                    style.textContent = `
-                        @keyframes pulse {
-                            0% { box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4); }
-                            50% { box-shadow: 0 15px 40px rgba(76, 175, 80, 0.6); transform: translate(-50%, -50%) scale(1.05); }
-                            100% { box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4); }
-                        }
-                    `;
-                    document.head.appendChild(style);
-                    
-                    certificateButton.onclick = () => {
-                        generateCertificate();
-                        certificateButton.remove();
-                    };
-                    
-                    // Add backdrop
-                    const backdrop = document.createElement('div');
-                    backdrop.style.cssText = `
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: rgba(0, 0, 0, 0.8);
-                        z-index: 9999;
-                        backdrop-filter: blur(5px);
-                    `;
-                    backdrop.onclick = () => {
-                        backdrop.remove();
-                        certificateButton.remove();
-                    };
-                    
-                    document.body.appendChild(backdrop);
-                    document.body.appendChild(certificateButton);
-                }
-            }
-        }
-
-        // Monitor progress changes for certificate eligibility
-        document.addEventListener('change', function(e) {
-            if (e.target.classList.contains('lesson-checkbox')) {
-                setTimeout(checkCourseCompletion, 1000);
-            }
-        });
-
-        // Export progress function
-        function exportProgress() {
-            const progressData = {
-                courseName: 'PL-300 Power BI Tamil Course',
-                studentName: prompt('உங்கள் பெயர் / Your name:') || 'Student',
-                exportDate: new Date().toISOString(),
-                progress: courseProgress,
-                statistics: {
-                    totalLessons: document.querySelectorAll('.lesson-checkbox').length,
-                    completedLessons: Object.keys(courseProgress).length,
-                    completionPercentage: Math.round((Object.keys(courseProgress).length / document.querySelectorAll('.lesson-checkbox').length) * 100)
-                }
-            };
-
-            const dataStr = JSON.stringify(progressData, null, 2);
-            const dataBlob = new Blob([dataStr], {type: 'application/json'});
-            const url = URL.createObjectURL(dataBlob);
-            
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = `PL300-Tamil-Course-Progress-${new Date().toISOString().split('T')[0]}.json`;
-            link.click();
-            
-            URL.revokeObjectURL(url);
-        }
-
-        // Add export button to progress section
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(() => {
-                const progressSection = document.querySelector('.progress-section');
-                if (progressSection) {
-                    const exportButton = document.createElement('button');
-                    exportButton.innerHTML = '📊 Export Progress / முன்னேற்றத்தை ஏற்றுமதி செய்க';
-                    exportButton.style.cssText = `
-                        background: #6c757d;
-                        color: white;
-                        border: none;
-                        padding: 12px 25px;
-                        border-radius: 25px;
-                        font-weight: 600;
-                        cursor: pointer;
-                        margin: 20px auto;
-                        display: block;
-                        transition: all 0.3s ease;
-                        font-family: 'Noto Sans Tamil', Arial, sans-serif;
-                    `;
-                    exportButton.onmouseover = () => exportButton.style.background = '#5a6268';
-                    exportButton.onmouseout = () => exportButton.style.background = '#6c757d';
-                    exportButton.onclick = exportProgress;
-                    
-                    progressSection.appendChild(exportButton);
-                }
-            }, 2000);
+            console.log('🎥 Video click tracking enabled');
         });
     </script>
 </body>
