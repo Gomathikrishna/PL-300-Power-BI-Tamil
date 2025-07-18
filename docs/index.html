@@ -1,354 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>PL-300 Power BI Tamil Course</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Complete PL-300 Power BI Course in Tamil - From Beginner to Advanced">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://Gomathikrishna.github.io/PL-300-Power-BI-Tamil/">
-  <meta property="og:title" content="PL-300 Power BI Tamil Course">
-  <meta property="og:description" content="Complete Power BI course in Tamil covering data analysis, modeling, and visualization">
-  <meta property="og:image" content="https://img.icons8.com/color/96/000000/power-bi.png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://Gomathikrishna.github.io/PL-300-Power-BI-Tamil/">
-  <meta property="twitter:title" content="PL-300 Power BI Tamil Course">
-  <meta property="twitter:description" content="Complete Power BI course in Tamil covering data analysis, modeling, and visualization">
-  <meta property="twitter:image" content="https://img.icons8.com/color/96/000000/power-bi.png">
-  
-  <!-- Custom Styles -->
-  <style>
-    :root {
-      --theme-color: #0078d4;
-      --theme-color-secondary: #106ebe;
-      --theme-color-light: #deecf9;
-      --accent-color: #ff6900;
-      --success-color: #107c10;
-      --tamil-font: 'Noto Sans Tamil', 'Latha', 'Vijaya', sans-serif;
-    }
-
-    /* Tamil font support */
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap');
-    
-    body {
-      font-family: var(--tamil-font);
-      line-height: 1.6;
-    }
-    
-    .tamil {
-      font-family: var(--tamil-font);
-      font-weight: 500;
-    }
-    
-    /* Cover page styling */
-    .cover-main {
-      background: linear-gradient(135deg, var(--theme-color) 0%, var(--theme-color-secondary) 100%);
-      color: white;
-    }
-
-    .cover-main > p:last-child a {
-      background: var(--accent-color);
-      color: white;
-      border: none;
-      border-radius: 6px;
-      padding: 12px 24px;
-      margin: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .cover-main > p:last-child a:hover {
-      background: #e55a00;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Sidebar styling */
-    .sidebar ul li a {
-      font-family: var(--tamil-font);
-      font-weight: 500;
-    }
-
-    /* Video embed styling */
-    .video-container {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%;
-      margin: 1.5rem 0;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Progress indicator */
-    .progress-indicator {
-      background: var(--theme-color-light);
-      padding: 10px 15px;
-      border-radius: 5px;
-      margin: 15px 0;
-      border-left: 4px solid var(--theme-color);
-    }
-
-    /* Module cards */
-    .module-card {
-      background: white;
-      border: 1px solid #e1e5e9;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-    }
-
-    .module-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Table styling */
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 1.5rem 0;
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    table th {
-      background: var(--theme-color);
-      color: white;
-      font-weight: 600;
-      padding: 12px 16px;
-      text-align: left;
-    }
-
-    table td {
-      padding: 12px 16px;
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    table tr:hover {
-      background: #f8f9fa;
-    }
-
-    /* Alert boxes */
-    .alert {
-      padding: 1rem;
-      border-radius: 6px;
-      margin: 1rem 0;
-      border-left: 4px solid;
-    }
-
-    .alert-info {
-      background: var(--theme-color-light);
-      border-left-color: var(--theme-color);
-      color: var(--theme-color-secondary);
-    }
-
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-      .content {
-        padding: 1rem;
-      }
-      
-      table {
-        font-size: 0.9rem;
-      }
-      
-      .module-card {
-        padding: 1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PL-300 Power BI Tamil Course</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans Tamil', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            border-left: 5px solid #0078d4;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .course-title {
+            color: #0078d4;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .course-description {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .video-link {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .video-link:hover {
+            background: #e55a2b;
+        }
+        
+        .tamil {
+            font-weight: 500;
+            color: #2d3748;
+        }
+        
+        .progress-section {
+            background: #e3f2fd;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .progress-title {
+            color: #1976d2;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .lesson-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .lesson-item:last-child {
+            border-bottom: none;
+        }
+        
+        .lesson-checkbox {
+            margin-right: 15px;
+            transform: scale(1.2);
+        }
+        
+        .lesson-text {
+            flex: 1;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <div id="app">Loading...</div>
-  <script>
-    window.$docsify = {
-      name: 'PL-300 Power BI Tamil',
-      repo: 'https://github.com/Gomathikrishna/PL-300-Power-BI-Tamil',
-      loadSidebar: true,
-      coverpage: true,
-      onlyCover: false,
-      maxLevel: 4,
-      subMaxLevel: 2,
-      auto2top: true,
-      homepage: 'README.md',
-      
-      // Search configuration
-      search: {
-        maxAge: 86400000,
-        paths: 'auto',
-        placeholder: 'Search the course... / பாடத்தைத் தேடுங்கள்...',
-        noData: 'No results found / முடிவுகள் எதுவும் கிடைக்கவில்லை',
-        depth: 4,
-        hideOtherSidebarContent: false,
-      },
+    <div class="container">
+        <header>
+            <h1>🎯 PL-300 Power BI Tamil Course</h1>
+            <p class="subtitle">
+                <span class="tamil">Microsoft Power BI-ஐ தமிழில் கற்றுக்கொள்ளுங்கள்</span><br>
+                Learn Microsoft Power BI in Tamil
+            </p>
+        </header>
 
-      // Copy code configuration
-      copyCode: {
-        buttonText: 'Copy / நகலெடு',
-        errorText: 'Error / பிழை',
-        successText: 'Copied / நகலெடுக்கப்பட்டது'
-      },
+        <div class="content">
+            <h2>📚 <span class="tamil">பாடத்திட்டம் (Course Curriculum)</span></h2>
+            
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-title">1. Data Analysis கண்டுபிடித்தல்</div>
+                    <div class="course-description">
+                        <span class="tamil">தரவு பகுப்பாய்வின் அடிப்படைகளை கற்றுக்கொள்ளுங்கள்</span><br>
+                        Learn the fundamentals of data analysis
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=Mb2Zn1zOJ2Q&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=1&t=89s" 
+                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
+                </div>
 
-      // Flexible alerts
-      'flexible-alerts': {
-        style: 'flat',
-        note: {
-          label: "குறிப்பு / Note"
-        },
-        tip: {
-          label: "உதவிக்குறிப்பு / Tip"
-        },
-        warning: {
-          label: "எச்சரிக்கை / Warning"
-        },
-        danger: {
-          label: "முக்கியம் / Important"
-        }
-      },
+                <div class="course-card">
+                    <div class="course-title">2. Microsoft Fabric அறிமுகம்</div>
+                    <div class="course-description">
+                        <span class="tamil">Microsoft Fabric-ன் அறிமுகம் மற்றும் Copilot</span><br>
+                        Introduction to Microsoft Fabric and Copilot
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=9MbHHvkcf9c&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=39" 
+                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
+                </div>
 
-      // Plugins configuration
-      plugins: [
-        // Custom plugin for Tamil content support
-        function(hook, vm) {
-          hook.ready(function() {
-            console.log('PL-300 Power BI Tamil Course loaded successfully!');
-          });
-          
-          hook.doneEach(function() {
-            // Add Tamil language support
-            document.querySelectorAll('.tamil').forEach(function(el) {
-              el.style.fontFamily = 'var(--tamil-font)';
+                <div class="course-card">
+                    <div class="course-title">3. Power BI இல் தரவு பெறுதல்</div>
+                    <div class="course-description">
+                        <span class="tamil">பல்வேறு மூலங்களிலிருந்து தரவை எவ்வாறு பெறுவது</span><br>
+                        How to get data from various sources
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=B3HXUu6tKaY&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=2&t=153s" 
+                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-title">4. தரவு சுத்தம் மற்றும் உருமாற்றம்</div>
+                    <div class="course-description">
+                        <span class="tamil">தரவை சுத்தம் செய்து, உருமாற்றி, ஏற்றுதல்</span><br>
+                        Clean, transform, and load data
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=z6NF8tr9PMo&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=8" 
+                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-title">5. Semantic Model உள்ளமைவு</div>
+                    <div class="course-description">
+                        <span class="tamil">தரவு மாடல்களை உருவாக்கி உள்ளமைத்தல்</span><br>
+                        Configure and create data models
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=pTR5XCU2N38&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=11" 
+                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-title">6. DAX ஃபார்முலாக்கள்</div>
+                    <div class="course-description">
+                        <span class="tamil">DAX மொழியில் ஃபார்முலாக்களை எழுதுதல்</span><br>
+                        Write formulas in DAX language
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=yU2T-IEspGI&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=12" 
+                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-title">7. அறிக்கை வடிவமைப்பு</div>
+                    <div class="course-description">
+                        <span class="tamil">பயனர் நட்பு அறிக்கைகளை வடிவமைத்தல்</span><br>
+                        Design user-friendly reports
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=qlUTgxhQPcI&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=26" 
+                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-title">8. Dashboards உருவாக்குதல்</div>
+                    <div class="course-description">
+                        <span class="tamil">ஊடாடும் டாஷ்போர்டுகளை உருவாக்குதல்</span><br>
+                        Create interactive dashboards
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=JlTqftpqADk&list=PL9FfW__Sm3pJTJLMvZxqACnvxSAN_Rnrh&index=33" 
+                       target="_blank" class="video-link">📺 பார்க்கவும் / Watch</a>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <h3 class="progress-title">📊 <span class="tamil">முன்னேற்ற கண்காணிப்பு (Progress Tracking)</span></h3>
+                <div class="lesson-item">
+                    <input type="checkbox" class="lesson-checkbox" id="lesson1">
+                    <label for="lesson1" class="lesson-text">Data Analysis அடிப்படைகள்</label>
+                </div>
+                <div class="lesson-item">
+                    <input type="checkbox" class="lesson-checkbox" id="lesson2">
+                    <label for="lesson2" class="lesson-text">Microsoft Fabric அறிமுகம்</label>
+                </div>
+                <div class="lesson-item">
+                    <input type="checkbox" class="lesson-checkbox" id="lesson3">
+                    <label for="lesson3" class="lesson-text">தரவு பெறுதல்</label>
+                </div>
+                <div class="lesson-item">
+                    <input type="checkbox" class="lesson-checkbox" id="lesson4">
+                    <label for="lesson4" class="lesson-text">தரவு சுத்தம் மற்றும் உருமாற்றம்</label>
+                </div>
+                <div class="lesson-item">
+                    <input type="checkbox" class="lesson-checkbox" id="lesson5">
+                    <label for="lesson5" class="lesson-text">Semantic Model உள்ளமைவு</label>
+                </div>
+                <div class="lesson-item">
+                    <input type="checkbox" class="lesson-checkbox" id="lesson6">
+                    <label for="lesson6" class="lesson-text">DAX ஃபார்முலாக்கள்</label>
+                </div>
+                <div class="lesson-item">
+                    <input type="checkbox" class="lesson-checkbox" id="lesson7">
+                    <label for="lesson7" class="lesson-text">அறிக்கை வடிவமைப்பு</label>
+                </div>
+                <div class="lesson-item">
+                    <input type="checkbox" class="lesson-checkbox" id="lesson8">
+                    <label for="lesson8" class="lesson-text">Dashboards உருவாக்குதல்</label>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 40px 0;">
+                <h3>🔗 <span class="tamil">முக்கியமான இணைப்புகள் (Important Links)</span></h3>
+                <p style="margin: 20px 0;">
+                    <a href="https://github.com/Gomathikrishna/PL-300-Power-BI-Tamil" 
+                       style="background: #333; color: white; text-decoration: none; padding: 12px 24px; border-radius: 6px; margin: 10px;">
+                        📁 GitHub Repository
+                    </a>
+                    <a href="https://powerbi.microsoft.com/desktop/" 
+                       style="background: #0078d4; color: white; text-decoration: none; padding: 12px 24px; border-radius: 6px; margin: 10px;">
+                        💻 Download Power BI Desktop
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>
+                <span class="tamil">உருவாக்கியவர்: Gomathikrishna</span><br>
+                Created by: Gomathikrishna<br>
+                <span class="tamil">மகிழ்ச்சியான கற்றல்! 🚀</span> Happy Learning! 🚀
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple progress tracking
+        const checkboxes = document.querySelectorAll('.lesson-checkbox');
+        
+        // Load saved progress
+        checkboxes.forEach((checkbox, index) => {
+            const saved = localStorage.getItem(`lesson-${index + 1}`);
+            if (saved === 'true') {
+                checkbox.checked = true;
+            }
+            
+            // Save progress when changed
+            checkbox.addEventListener('change', function() {
+                localStorage.setItem(`lesson-${index + 1}`, this.checked);
+                updateProgress();
             });
-          });
+        });
+        
+        function updateProgress() {
+            const completed = Array.from(checkboxes).filter(cb => cb.checked).length;
+            const total = checkboxes.length;
+            const percentage = Math.round((completed / total) * 100);
+            
+            console.log(`Progress: ${completed}/${total} (${percentage}%)`);
+            
+            // Show completion message
+            if (completed === total) {
+                alert('🎉 வாழ்த்துக்கள்! நீங்கள் அனைத்து பாடங்களையும் முடித்துவிட்டீர்கள்!\n\nCongratulations! You have completed all lessons!');
+            }
         }
-      ]
-    }
-  </script>
-  
-  <!-- Docsify core -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  
-  <!-- Essential plugins only -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts"></script>
-  
-  <!-- Language highlighting -->
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-dax.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>
-
-  <!-- Custom JavaScript for Tamil course -->
-  <script>
-    // Custom functionality for Tamil course
-    document.addEventListener('DOMContentLoaded', function() {
-      // Add helpful features
-      console.log('🎯 PL-300 Power BI Tamil Course initialized');
-      
-      // Add progress tracking
-      const progressKey = 'pl300-tamil-progress';
-      
-      // Simple progress tracking
-      function trackProgress(lessonId) {
-        let progress = JSON.parse(localStorage.getItem(progressKey) || '{}');
-        progress[lessonId] = {
-          completed: true,
-          completedAt: new Date().toISOString()
-        };
-        localStorage.setItem(progressKey, JSON.stringify(progress));
-        console.log('Progress saved for:', lessonId);
-      }
-      
-      // Add video tracking
-      document.addEventListener('click', function(e) {
-        if (e.target.closest('a[href*="youtube.com"]')) {
-          const link = e.target.closest('a');
-          const lessonId = link.textContent.trim().replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
-          trackProgress(lessonId);
-        }
-      });
-      
-      // Add keyboard shortcuts
-      document.addEventListener('keydown', function(e) {
-        if (e.ctrlKey || e.metaKey) {
-          switch(e.key) {
-            case '/':
-              e.preventDefault();
-              const searchBox = document.querySelector('.search input');
-              if (searchBox) {
-                searchBox.focus();
-              }
-              break;
-            case 'h':
-              e.preventDefault();
-              window.location.hash = '#/';
-              break;
-          }
-        }
-      });
-    });
-
-    // Add scroll to top functionality
-    window.addEventListener('scroll', function() {
-      if (!document.querySelector('.scroll-to-top')) {
-        const scrollBtn = document.createElement('button');
-        scrollBtn.innerHTML = '↑';
-        scrollBtn.className = 'scroll-to-top';
-        scrollBtn.style.cssText = `
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          background: var(--theme-color);
-          color: white;
-          border: none;
-          border-radius: 50%;
-          width: 50px;
-          height: 50px;
-          cursor: pointer;
-          opacity: 0;
-          transition: all 0.3s ease;
-          z-index: 1000;
-          font-size: 18px;
-          font-weight: bold;
-        `;
-        scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-        document.body.appendChild(scrollBtn);
-      }
-      
-      const scrollBtn = document.querySelector('.scroll-to-top');
-      if (scrollBtn) {
-        if (window.pageYOffset > 300) {
-          scrollBtn.style.opacity = '1';
-        } else {
-          scrollBtn.style.opacity = '0';
-        }
-      }
-    });
-  </script>
+        
+        // Initial progress update
+        updateProgress();
+        
+        // Add click tracking for video links
+        document.querySelectorAll('.video-link').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Video clicked:', this.href);
+                // You can add analytics tracking here
+            });
+        });
+    </script>
 </body>
 </html>
