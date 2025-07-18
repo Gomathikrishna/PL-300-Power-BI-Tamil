@@ -14,6 +14,7 @@ This course follows Microsoft's official learning paths and provides additional 
 - **Data Modeling** - Creating relationships, DAX formulas, and optimizing performance
 - **Report Design** - Building interactive and visually appealing reports
 - **Management & Security** - Sharing, securing, and managing Power BI content
+- 
 
 ## 📚 Course Structure
 
