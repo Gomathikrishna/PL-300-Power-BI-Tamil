@@ -1,1 +1,6 @@
-
+* [🏠 Home](/)
+* [📚 Lessons](/lessons/)
+* [📦 Resources](/resources/)
+* [❓ FAQ](/faq.md)
+* [🎯 Progress](/progress-tracker.md)
+* [💬 Discussions](https://github.com/yourusername/power-bi-learning-course/discussions)
